@@ -4,6 +4,7 @@ package com.mengk.viewmodellivedata.common.http;
 import com.mengk.viewmodellivedata.common.config.URL;
 import com.mengk.viewmodellivedata.model.bean.HomeListVo;
 import io.reactivex.Flowable;
+import io.reactivex.Observable;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
@@ -16,7 +17,7 @@ public interface ApiService {
 
     @POST(URL.HOME_LIST)
     @FormUrlEncoded
-    Flowable<HomeListVo> getHomeData(@Field("professionid") String professionId);
+    Observable<HomeListVo> getHomeData(@Field("professionid") String professionId);
 
 //    @POST(URL.WORK_LIST)
 //    @FormUrlEncoded
